@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Cita</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="appointment-container">
+    <!-- Logo del mapache -->
+    <div class="logo-container">
+      <img src="imagenes/logo mapache.jpg" alt="Logo Mapache" class="logo">
+    </div>
+
+    <!-- Título de la página -->
+    <h1>Agenda tu cita</h1>
+    
+    <!-- Contenedor de selección de servicio y costos -->
+    <div class="service-selection-container">
+      <!-- Formulario de agendar cita -->
+      <form id="appointmentForm">
+        <h2>Selecciona el servicio:</h2>
+        <label>
+          <input type="radio" name="service" value="Corte de cabello"> Servicio 1
+        </label>
+        <label>
+          <input type="radio" name="service" value="Barba"> Servicio 2
+        </label>
+        <label>
+          <input type="radio" name="service" value="Corte y barba"> Servicio 3
+        </label>
+
+        <!-- Campo para fecha y hora combinados -->
+        <div class="date-time-container">
+          <label for="datetime">Fecha y hora:</label>
+          <input type="datetime-local" id="datetime" name="datetime" required>
+        </div>
+
+        <!-- Botón de agendar -->
+        <button type="submit">Agendar</button>
+      </form>
+
+      <!-- Costos por servicio -->
+      <div class="service-costs">
+        <h3>Costos por servicio:</h3>
+        <ul>
+          <li>Servicio 1: Corte de cabello $200.00</li>
+          <li>Servicio 2: Barba $100.00</li>
+          <li>Servicio 3: Depilado de cejas $50.00</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
