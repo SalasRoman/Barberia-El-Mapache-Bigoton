@@ -17,7 +17,7 @@ function openRegistration() {
     event.preventDefault();
     // Verificar correo y contraseña (puedes conectarlo a una base de datos)
   
-    window.location.href = 'schedule.html';  // Redirige a la página de agendar cita
+    window.location.href = 'citas.html';  // Redirige a la página de agendar cita
   });
   
   // Agendar cita
