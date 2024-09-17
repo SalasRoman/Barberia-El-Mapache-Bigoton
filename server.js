@@ -1,6 +1,28 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const sql = require('mssql');
+
+const config = {
+    server: 'DESKTOP-0ML8BMC',
+    database: 'RacoonBarbershopDB',
+    driver: 'msnodesqlv8',
+    options: {
+        trustedConnection: true
+    }
+};
+
+async function connectToDatabase() {
+    try {
+        const pool = await sql.connect(config);
+        console.log('Connected to SQL Server');
+        // Aquí puedes realizar consultas o interacciones adicionales con la base de datos
+    } catch (err) {
+        console.error('Database connection failed:', err);
+    }
+}
+
+connectToDatabase();
 
 app.use(bodyParser.json());
 app.use(express.static('public'));  // Sirve archivos estáticos como HTML y CSS
