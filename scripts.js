@@ -1,6 +1,6 @@
 // Redirigir al registro
 function openRegistration() {
-    window.location.href = 'register.html';  // Redirige a la página de registro
+    window.location.href = 'registro.html';  // Redirige a la página de registro
   }
   
   // Registro de usuario
